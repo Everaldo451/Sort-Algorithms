@@ -12,9 +12,7 @@ class SelectionSort:
                     min=lst[j]
                     min_idx=j
             if min<lst[i]:
-                current=lst[i]
-                lst[i]=min
-                lst[min_idx]=current
+                lst[min_idx], lst[i]=lst[i], min
         return lst
 
 

@@ -8,10 +8,9 @@ class InsertionSort:
             crr=lst[i]
             j=i-1
             while j>=0 and crr<lst[j]:
-                att=lst[j]
-                lst[j]=crr
-                lst[j+1]=att
+                lst[j+1] = lst[j]
                 j-=1
+            lst[j+1]=crr
         return lst
 
 
