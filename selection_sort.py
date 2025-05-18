@@ -5,12 +5,10 @@ class SelectionSort:
     @classmethod
     def sort(cls, lst:list):
         for i in range(len(lst)-1):
-            min=lst[i+1]
-            min_idx=i+1
+            min, min_idx=lst[i+1], i+1
             for j in range(i+2,len(lst)):
                 if lst[j]<min:
-                    min=lst[j]
-                    min_idx=j
+                    min, min_idx=lst[j], j
             if min<lst[i]:
                 lst[min_idx], lst[i]=lst[i], min
         return lst
